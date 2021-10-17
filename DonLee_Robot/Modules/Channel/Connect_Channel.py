@@ -40,18 +40,18 @@ async def connect(bot: DonLee_Robot, update):
     try:
         if target_chat[1].startswith("@"):
             if len(target_chat[1]) < 5:
-                await update.reply_text("Invalid Username...!!!")
+                await update.reply_text("⚠️ Invalid Username...!!!")
                 return
             target = target_chat[1]
             
         elif not target_chat[1].startswith("@"):
             if len(target_chat[1]) < 14:
-                await update.reply_text("Invalid Chat Id...\nChat ID Should Be Something Like This: <code>-100xxxxxxxxxx</code>")
+                await update.reply_text("⚠️ Invalid Chat Id...\nChat ID Should Be Something Like This: <code>-100xxxxxxxxxx</code>")
                 return
             target = int(target_chat[1])
                 
     except Exception:
-        await update.reply_text("Invalid Input...\nYou Should Specify Valid <code>chat_id(-100xxxxxxxxxx)</code> or <code>@username</code>")
+        await update.reply_text("⚠️ Invalid Input...\nYou Should Specify Valid <code>chat_id(-100xxxxxxxxxx)</code> or <code>@username</code>")
         return
     
     try:
@@ -72,7 +72,7 @@ async def connect(bot: DonLee_Robot, update):
         pass
     
     except Exception:
-        await update.reply_text(f"My UserBot [{userbot_name}](tg://user?id={userbot_id}) Couldnt Join The Channel `{target}` Make Sure Userbot Is Not Banned There Or Add It Manually And Try Again....!!")
+        await update.reply_text(f"My UserBot [{userbot_name}](tg://user?id={userbot_id}) ⚠️ Couldnt Join The Channel `{target}` Make Sure Userbot Is Not Banned There Or Add It Manually And Try Again....!!")
         return
     
     try:
@@ -81,17 +81,17 @@ async def connect(bot: DonLee_Robot, update):
         channel_name = c_chat.title
         
     except Exception as e:
-        await update.reply_text("Encountered Some Issue..Please Check Logs..!!")
+        await update.reply_text("⚠️ Encountered Some Issue..Please Check Logs..!!")
         raise e
         
         
     in_db = await db.in_db(chat_id, channel_id)
     
     if in_db:
-        await update.reply_text("Channel Aldready In Db...!!!")
+        await update.reply_text("😚 Channel Aldready In Db...!!!")
         return
     
-    wait_msg = await update.reply_text("Please Wait Till I Add All Your Files From Channel To Db\n\n<i>This May Take 10 or 15 Mins Depending On Your No. Of Files In Channel.....</i>\n\nUntil Then Please Dont Sent Any Other Command Or This Operation May Be Intrupted....")
+    wait_msg = await update.reply_text("Please Wait Till I Add All Your Files From Channel To Db\n\n<i>This May Take 10 or 15 Mins Depending On Your No. Of Files In Channel.....</i>\n\n❌ Until Then Please Dont Sent Any Other Command Or This Operation May Be Intrupted....")
     
     try:
         type_list = ["video", "audio", "document"]
@@ -185,16 +185,16 @@ async def connect(bot: DonLee_Robot, update):
                         continue
                     print(e)
 
-        print(f"{skipCT} Files Been Skipped Due To File Name Been None..... #BlameTG")
+        print(f"{skipCT} Files Been Skipped Due To File Name Been None ⚠️.....")
     except Exception as e:
-        await wait_msg.edit_text("Couldnt Fetch Files From Channel... Please look Into Logs For More Details")
+        await wait_msg.edit_text("⚠️ Couldnt Fetch Files From Channel... Please look Into Logs For More Details")
         raise e
     
     await db.add_filters(data)
     await db.add_chat(chat_id, channel_id, channel_name)
     await recacher(chat_id, True, True, bot, update)
     
-    await wait_msg.edit_text(f"Channel Was Sucessfully Added With <code>{len(data)}</code> Files..")
+    await wait_msg.edit_text(f"✅ Channel Was Sucessfully Added With <code>{len(data)}</code> Files..")
 
 
 @Client.on_message(filters.command(["del"]) & filters.group, group=1)
@@ -221,18 +221,18 @@ async def disconnect(bot: DonLee_Robot, update):
     try:
         if target_chat[1].startswith("@"):
             if len(target_chat[1]) < 5:
-                await update.reply_text("Invalid Username...!!!")
+                await update.reply_text("⚠️ Invalid Username...!!!")
                 return
             target = target_chat[1]
             
         elif not target_chat.startswith("@"):
             if len(target_chat[1]) < 14:
-                await update.reply_text("Invalid Chat Id...\nChat ID Should Be Something Like This: <code>-100xxxxxxxxxx</code>")
+                await update.reply_text("⚠️ Invalid Chat Id...\nChat ID Should Be Something Like This: <code>-100xxxxxxxxxx</code>")
                 return
             target = int(target_chat[1])
                 
     except Exception:
-        await update.reply_text("Invalid Input...\nYou Should Specify Valid chat_id(-100xxxxxxxxxx) or @username")
+        await update.reply_text("⚠️ Invalid Input...\nYou Should Specify Valid chat_id(-100xxxxxxxxxx) or @username")
         return
     
     userbot = await bot.USER.get_me()
@@ -243,23 +243,23 @@ async def disconnect(bot: DonLee_Robot, update):
         channel_info = await bot.USER.get_chat(target)
         channel_id = channel_info.id
     except Exception:
-        await update.reply_text(f"My UserBot [{userbot_name}](tg://user?id={userbot_id}) Couldnt Fetch Details Of `{target}` Make Sure Userbot Is Not Banned There Or Add It Manually And Try Again....!!")
+        await update.reply_text(f"⚠️ My UserBot [{userbot_name}](tg://user?id={userbot_id}) Couldnt Fetch Details Of `{target}` Make Sure Userbot Is Not Banned There Or Add It Manually And Try Again....!!")
         return
     
     in_db = await db.in_db(chat_id, channel_id)
     
     if not in_db:
-        await update.reply_text("This Channel Is Not Connected With The Group...")
+        await update.reply_text("⚠️ This Channel Is Not Connected With The Group...")
         return
     
-    wait_msg = await update.reply_text("Deleting All Files Of This Channel From DB....!!!\n\nPlease Be Patience...Dont Sent Another Command Until This Process Finishes..")
+    wait_msg = await update.reply_text("❗Deleting All Files Of This Channel From DB....!!!\n\nPlease Be Patience... ❌Dont Sent Another Command Until This Process Finishes..")
     
     await db.del_filters(chat_id, channel_id)
     await db.del_active(chat_id, channel_id)
     await db.del_chat(chat_id, channel_id)
     await recacher(chat_id, True, True, bot, update)
     
-    await wait_msg.edit_text("Sucessfully Deleted All Files From DB....")
+    await wait_msg.edit_text("✅ Sucessfully Deleted All Files From DB....")
 
 
 @Client.on_message(filters.command(["delall"]) & filters.group, group=1)
@@ -285,7 +285,7 @@ async def delall(bot: DonLee_Robot, update):
     await db.delete_all(chat_id)
     await recacher(chat_id, True, True, bot, update)
     
-    await update.reply_text("Sucessfully Deleted All Connected Chats From This Group....")
+    await update.reply_text("✅ Sucessfully Deleted All Connected Chats From This Group....")
 
 
 @Client.on_message(filters.channel & (filters.video | filters.audio | filters.document) & ~filters.edited, group=0)
@@ -360,4 +360,4 @@ async def new_files(bot: DonLee_Robot, update):
         await db.add_filters(data)
     return
 
-runing = """Team mo tech"""
+runing = """Team seriesmovieszz"""
