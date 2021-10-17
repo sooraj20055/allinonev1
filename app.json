@@ -1,14 +1,14 @@
 {
-    "name": "Auto Filter Bot V2",
+    "name": "All In One Bot",
     "description": "A Filter Bot Which Doesnt Need Manuall Filter Adding",
-    "logo": "https://telegra.ph/file/92daa86a5ceb28fa6962d.jpg",
+    "logo": "http://telegra.ph/SERIES-MOVIES-10-17",
     "keywords": [
         "Auto",
         "Filter",
         "Mongo DB"
     ],
     "website": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
-    "repository": "https://github.com/PR0FESS0R-99/DonLee_Robot/tree/main",
+    "repository": "https://github.com/sooraj20055/allinonev1",
     "success_url": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
     "env": {
         "APP_ID": {
