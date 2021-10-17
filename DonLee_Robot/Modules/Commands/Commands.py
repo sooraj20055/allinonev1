@@ -77,13 +77,13 @@ async def start(bot, update):
                           ),
                       Mo_Tech_YT.MO_TECH_YT_02
                           (
-                              '📂 Files Channel', url=''
+                              '📂 Files Channel', url='https://t.me/allinone_file'
                           )
                   ],
                   [
                       Mo_Tech_YT.MO_TECH_YT_02
                           (
-                              '😎 My Owner', url=''
+                              '😎 My Owner', url='https://t.me/sooraj_be'
                           )
                   ],
                   [
