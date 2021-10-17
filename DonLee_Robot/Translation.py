@@ -1,17 +1,15 @@
 import os
 class Translation(object):
   
-    START_TEXT = """<b>🙋‍♂️Hey {}!!</b>
+    START_TEXT = """<b>Hey👋 {}!!</b>
 
 <b>Am Just A Pro Auto Filter Bot....😉</b>
 
-<b>Just Add Me To Your Group And Channel And Connect Them And See My Pevers 🔥🔥😝</b>
 
-<b>Subscribe to the update channel to learn about my updates and activity...</b>
 
 <b>Press /help to know about available commands🤪</b>
 
-<b>Maintained By @Mo_Tech_YT</b>"""    
+<b>Maintained By @sooraj_be</b>"""    
     
     HELP_TEXT = """
 <b><u>Notice</u></b>
@@ -36,18 +34,18 @@ Rating Not Available</codd>
             
    ☞ <code>Status</code> - <b>Button Will Shows The Stats Of Your Channel</b>
 
-Maintained By @Mo_Tech_YT"""
+Maintained By @sooraj_be"""
     
     ABOUT_TEXT = """
 <b>➥ 🤖Bot</b> : <b>Adv Auto Filter Bot v2.9</b>
     
-<b>➥ 😎Creator</b> : <b>@AlbertEinstein_TG</b> 
+<b>➥ 😎My owner</b> : <b>@sooraj_be</b> 
 
-<b>➥ 👨‍💻Editor</b> : <b>@Mrk_YT</b>
+<b>➥ 👨‍💻Edited by</b> : <b>@stephennedumpally</b>
 
 <b>➥ 🗣️Language</b> : <b>Python3</b>
 
 <b>➥ 📚Library</b> : <b>Pyrogram Asyncio 1.13.0</b>
 
-<b>➥ 📖Source Code</b> : <b><a href="https://github.com/PR0FESS0R-99/DonLee_Robot">💥Click Me</a></b>
+<b>➥ 📖Source Code</b> : <b><a href="https://github.com/sooraj20055/allinonev1">💥Click Me</a></b>
 """
