@@ -293,7 +293,7 @@ async def auto_filter(bot, update):
                 the_query = the_query.replace(i,"")
             except :
                 pass
-        for i in "movie malayalam english tamil kannada telugu subtitles esub esubs".split():
+        for i in "movie malayalam english tamil kannada telugu subtitles esub esubs dubbed dub".split():
             if i in the_query.lower().split():
                 the_query = the_query.replace(i,"")
 
