@@ -1,7 +1,7 @@
 # [All In One Rovot](https://telegra.ph/SERIES-MOVIES-10-17)
 
 <p align="center">
-  <a href="https://github.com/PR0FESS0R-99/DonLee_Robot/stargazers">
+  <a href="https://github.com/sooraj20055/allinonev1">
     <img src="https://img.shields.io/github/stars/PR0FESS0R-99/DonLee_Robot?style=social">
 
   </a>
@@ -29,8 +29,7 @@ Just Sent Any Text As Query It Will Search For All Connected Chat's Files In Its
 * Movie Text Mode (movie, Movie)
 
 --------
-##### Available DonLee Bots
-
+##### Available All in One Bot
 <details><summary>Auto Filter Orginal</summary>
 <p>
 <br>
