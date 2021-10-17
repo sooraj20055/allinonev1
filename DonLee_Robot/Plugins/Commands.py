@@ -1,7 +1,7 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) @AlbertEinsteinTG
-# (e) @Muhammed_RK, @Mo_Tech_YT , @Mo_Tech_Group, @MT_Botz
+# (e) @@sooraj_be, @@allinonemsbot , @@allinonemsbot, @seriesmovieszz
 # Copyright permission under MIT License
 # All rights reserved by PR0FESS0R-99
 # License -> https://github.com/PR0FESS0R-99/DonLee_Robot/blob/main/LICENSE
@@ -52,14 +52,14 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('My Dev 🧒', url='https://t.me/mrk_yt'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/PR0FESS0R-99/DonLee_Robot')
+        InlineKeyboardButton('My Sooraj 🧒', url='https://t.me/seriesmovieszz'),
+        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/sooraj20055/allinonev1')
     ],[
-        InlineKeyboardButton('🛠 Support 🛠', url='https://t.me/mo_tech_yt')
+        InlineKeyboardButton('🛠 Support 🛠', url='@allinonemsbot')
     ],[
         InlineKeyboardButton('⚙ Help ⚙', callback_data="help")
     ],[
-        InlineKeyboardButton('💫 Deploy Video 💫', url='https://youtu.be/uAHl5jvnrhk')
+        InlineKeyboardButton('💫 Deploy Video 💫', url='https://youtube.com/channel/UCdFT4J4tXRaQ-It-bpdFhHQ')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
