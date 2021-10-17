@@ -1,6 +1,6 @@
 # (c) @SpEcHIDe
 # (c) @AlbertEinsteinTG
-# (e) @sooraj_be, @sooraj_be , @seriesmovieszz, @@allinonemsbot
+# (e) @sooraj_be, @sooraj_be , @seriesmovieszz, @allinonemsbot
 # Copyright permission under MIT License
 # All rights reserved by PR0FESS0R-99
 # License -> https://github.com/PR0FESS0R-99/DonLee_Robot/blob/main/LICENSE
