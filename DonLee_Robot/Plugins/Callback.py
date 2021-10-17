@@ -96,7 +96,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"🔰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"🎈 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🎈", callback_data="ignore")
         ])
     
     if show_invite and int(index_val) !=0 :
@@ -143,7 +143,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=f"<i>Check Links At @allinone_file 🎈Found</i> <code>{leng}</code> <i>Results For Your Request 🎈😊:</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
@@ -1640,10 +1640,10 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/Mrk_YT'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/PR0FESS0R-99/DonLee_Robot')
+            InlineKeyboardButton('My Sooraj 👨‍🔬', url='https://t.me/seriesmovieszz'),
+            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/sooraj20055/allinonev1')
         ],[
-            InlineKeyboardButton('🛠 Support 🛠', url='https://t.me/mo_Tech_yt')
+            InlineKeyboardButton('🛠 Support 🛠', url='https://t.me/seriesmovieszz')
         ],[
             InlineKeyboardButton('⚙ Help ⚙', callback_data="help")
         ],[
